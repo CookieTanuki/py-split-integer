@@ -18,10 +18,9 @@ def test_parts_should_be_sorted_when_they_are_not_equal() -> None:
 
 
 def test_should_add_zeros_when_value_is_less_than_number_of_parts() -> None:
-    result = split_integer(4, 6)
-    assert sum(result) == 4
-    assert len(result) == 6
-    assert result.count(0) > 0
+    assert sum(split_integer(4, 6)) == 4
+    assert len(split_integer(4, 6)) == 6
+    assert split_integer(4, 6).count(0) > 0
 
 
 def test_should_return_list_with_the_correct_number_of_elements() -> None:
@@ -29,5 +28,4 @@ def test_should_return_list_with_the_correct_number_of_elements() -> None:
 
 
 def test_difference_between_min_and_max() -> None:
-    result = split_integer(17, 4)
-    assert max(result) == min(result) or max(result) == min(result) + 1
+    assert max(split_integer(17, 4)) - min(split_integer(17, 4)) <= 1

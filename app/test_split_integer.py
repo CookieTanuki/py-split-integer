@@ -22,3 +22,12 @@ def test_should_add_zeros_when_value_is_less_than_number_of_parts() -> None:
     assert sum(result) == 4
     assert len(result) == 6
     assert result.count(0) > 0
+
+
+def test_should_return_list_with_the_correct_number_of_elements() -> None:
+    assert len(split_integer(17, 4)) == 4
+
+
+def test_difference_between_min_and_max() -> None:
+    result = split_integer(17, 4)
+    assert max(result) == min(result) or max(result) == min(result) + 1
